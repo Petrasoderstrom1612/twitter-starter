@@ -33,7 +33,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
-    "eslint linebreak-style": ["error", "windows"], 
+    "linebreak-style": ["error", "unix"], 
     "arrow-body-style": "off",
     "class-methods-use-this": "off",
     "brace-style": [
