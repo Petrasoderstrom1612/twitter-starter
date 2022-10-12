@@ -21,7 +21,7 @@ export const App = () => {
     <div>
       Find me in src/app.js!
       <p>{counter}</p>
-      <button onClick={onCounterIncrease} type="button"> counter increate </button>
+      <button onClick={onCounterIncrease} type="button"> counter increase </button>
       {counter === 1 && (<TaskList list="Test list" />)}
     </div>
   )
