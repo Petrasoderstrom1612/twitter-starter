@@ -4,12 +4,13 @@ import Details from 'components/Details';
 import NotFound from 'components/NotFound';
 import Header from 'components/Header';
 import List from 'components/List';
+import { BASE_URL }
 
 export const App = () => {
   const [pokemonList, setPokemonList] = useState([]);
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon')
+    fetch(BASE_URL)
       .then((response) => response.json())
       .then((data) => setPokemonList(data.results))
   }, []);
@@ -26,3 +27,5 @@ export const App = () => {
     </BrowserRouter>
   )
 }
+
+export default App;

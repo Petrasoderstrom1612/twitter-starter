@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 export const List = ({ list }) => {
   return (
-    <div>
+    <div className="list">
       {list.map((pokemon) => {
-        return <Link key={pokemon.name} to={`/details/${pokemon.name}`}>{pokemon.name}</Link>
+        return <Link className="list-element" key={pokemon.name} to={`/details/${pokemon.name}`}>{pokemon.name}</Link>
       })}
     </div>
   );
