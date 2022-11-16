@@ -1,28 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import TaskList from 'components/TaskList';
+import React from 'react';
+import Card from 'lib/Card';
+import styled from 'styled-components/macro';
+
+const ThinnerCard = styled(Card)`
+width: 400px;`
 
 export const App = () => {
-  const [counter, setCounter] = useState(0);
-
-  useEffect(() => {
-    console.log('test'); /* mounting here */
-  }, []) /* first appearance of use effect
-  if empty array, the function jumps to the start of the use Effect function */
-
-  useEffect(() => {
-    window.alert(`the current counter is ${counter}`)
-  }, [counter]) /* first appearance of use effect - counter mounts directly */
-
-  const onCounterIncrease = () => {
-    setCounter(counter + 1);
-  }
-
   return (
-    <div>
-      Find me in src/app.js!
-      <p>{counter}</p>
-      <button onClick={onCounterIncrease} type="button"> counter increase </button>
-      {counter === 1 && (<TaskList list="Test list" />)}
-    </div>
+    <>
+      <ThinnerCard
+        coverImage="https://www.fillmurray.com/g/500/300"
+        thumbnailUrl="https://www.fillmurray.com/100/100"
+        title="This is the title"
+        secondaryText="This is the secondary text">
+        child content here
+      </ThinnerCard>
+      <Card
+        title="This is the title"
+        secondaryText="This is the secondary text" />
+      <Card>
+        <h1>Hello children</h1>
+      </Card>
+    </>
   )
 }
